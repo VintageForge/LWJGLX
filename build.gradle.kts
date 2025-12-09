@@ -4,19 +4,16 @@ plugins {
 }
 
 group = "xyz.vintageforge"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
-    maven("https://repo.cleanroommc.com/snapshots").content {
-        includeGroup("org.lwjgl3")
-    }
 }
 
 dependencies {
 
-    listOf("lwjgl3-glfw", "lwjgl3-jemalloc", "lwjgl3-openal", "lwjgl3-opengl", "lwjgl3-stb", "lwjgl3-tinyfd", "lwjgl3").forEach {
-        compileOnly("org.lwjgl3:$it:3.3.4-27-CLEANROOM")
+    listOf("lwjgl-glfw", "lwjgl-jemalloc", "lwjgl-openal", "lwjgl-opengl", "lwjgl-stb", "lwjgl-tinyfd", "lwjgl").forEach {
+        compileOnly("org.lwjgl:$it:3.3.6")
     }
 
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
@@ -36,6 +33,7 @@ publishing {
 
     publications {
         create<MavenPublication>("maven") {
+            artifactId = "lwjglxx"
             from(components["java"])
         }
     }
