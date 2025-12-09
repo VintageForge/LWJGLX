@@ -36,6 +36,7 @@ publishing {
 
     publications {
         create<MavenPublication>("maven") {
+            artifactId = "lwjglx"
             from(components["java"])
         }
     }
