@@ -4,10 +4,12 @@ import static org.lwjgl.glfw.GLFW.glfwInit;
 
 import java.awt.*;
 import java.net.URI;
+import java.util.Objects;
 
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
+import net.minecraftforge.common.ForgeEarlyConfig;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.system.Configuration;
@@ -22,6 +24,19 @@ public class Sys {
             Configuration.GLFW_CHECK_THREAD0.set(false);
             Toolkit.getDefaultToolkit();
         }
+
+        if (Objects.requireNonNullElse(System.getenv("XDG_SESSION_TYPE"),"").toLowerCase().startsWith("wayland")) {
+            if (!ForgeEarlyConfig.FORCE_WAYLAND) {
+                GLFW.glfwInitHint(GLFW.GLFW_PLATFORM, GLFW.GLFW_PLATFORM_X11);
+            } else {
+                GLFW.glfwInitHint(GLFW.GLFW_PLATFORM, GLFW.GLFW_PLATFORM_WAYLAND);
+            }
+        }
+
+        if (!glfwInit()) {
+            throw new IllegalStateException("Unable to initialize glfw");
+        }
+
         if (!glfwInit()) {
             throw new IllegalStateException("Unable to initialize glfw");
         }

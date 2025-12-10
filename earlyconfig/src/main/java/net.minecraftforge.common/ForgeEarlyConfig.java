@@ -4,6 +4,7 @@ public class ForgeEarlyConfig {
     public static boolean WINDOW_START_MAXIMIZED = false;
     public static boolean WINDOW_START_FOCUSED = true;
     public static boolean WINDOW_START_ICONIFIED = false;
+    public static boolean FORCE_WAYLAND = false;
     public static boolean WINDOW_DECORATED = true;
     public static boolean OPENGL_DEBUG_CONTEXT = false;
     public static boolean OPENGL_SRGB_CONTEXT = false;

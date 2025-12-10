@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "xyz.vintageforge"
-version = "1.0.3"
+version = "1.0.6"
 
 repositories {
     mavenCentral()
@@ -18,7 +18,7 @@ dependencies {
 
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
     compileOnly("org.apache.commons:commons-lang3:3.19.0")
-    compileOnly("com.github.oshi:oshi-core:6.5.0")
+    compileOnly("com.github.oshi:oshi-core:6.9.1")
     compileOnly(project(":earlyconfig"))
 
 }
