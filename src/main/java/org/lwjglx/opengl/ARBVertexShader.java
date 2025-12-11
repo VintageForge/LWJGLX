@@ -1,5 +1,6 @@
 package org.lwjglx.opengl;
 
+import org.lwjglx.MemoryUtil;
 import org.lwjglx.lwjgl3ify.BufferCasts;
 
 public class ARBVertexShader {
@@ -162,7 +163,7 @@ public class ARBVertexShader {
                 (unsigned ? org.lwjgl.opengl.GL11.GL_UNSIGNED_BYTE : org.lwjgl.opengl.GL11.GL_BYTE),
                 normalized,
                 stride,
-                org.lwjglx.MemoryUtil.getAddress(buffer));
+                MemoryUtil.getAddress(buffer));
     }
 
     public static void glVertexAttribPointerARB(int index, int size, boolean unsigned, boolean normalized, int stride,
@@ -174,7 +175,7 @@ public class ARBVertexShader {
                 (unsigned ? org.lwjgl.opengl.GL11.GL_UNSIGNED_INT : org.lwjgl.opengl.GL11.GL_INT),
                 normalized,
                 stride,
-                org.lwjglx.MemoryUtil.getAddress(buffer));
+                MemoryUtil.getAddress(buffer));
     }
 
     public static void glVertexAttribPointerARB(int index, int size, boolean unsigned, boolean normalized, int stride,
@@ -186,6 +187,6 @@ public class ARBVertexShader {
                 (unsigned ? org.lwjgl.opengl.GL11.GL_UNSIGNED_SHORT : org.lwjgl.opengl.GL11.GL_SHORT),
                 normalized,
                 stride,
-                org.lwjglx.MemoryUtil.getAddress(buffer));
+                MemoryUtil.getAddress(buffer));
     }
 }

@@ -137,9 +137,9 @@ public class GL32 {
         org.lwjgl.opengl.GL32.glDrawRangeElementsBaseVertex(mode, start, end, indices, basevertex);
     }
 
-    public static org.lwjglx.opengl.GLSync glFenceSync(int condition, int flags) {
+    public static GLSync glFenceSync(int condition, int flags) {
 
-        org.lwjglx.opengl.GLSync returnValue = new org.lwjglx.opengl.GLSync(
+        GLSync returnValue = new GLSync(
                 org.lwjgl.opengl.GL32.glFenceSync(condition, flags));
 
         return returnValue;

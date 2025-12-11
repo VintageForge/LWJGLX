@@ -10,33 +10,33 @@ public class ALC11 {
     public static final int ALC_MONO_SOURCES = (int) 4112;
     public static final int ALC_STEREO_SOURCES = (int) 4113;
 
-    public static boolean alcCaptureCloseDevice(org.lwjglx.openal.ALCdevice device) {
+    public static boolean alcCaptureCloseDevice(ALCdevice device) {
 
         boolean returnValue = org.lwjgl.openal.ALC11.alcCaptureCloseDevice(device.device);
 
         return returnValue;
     }
 
-    public static org.lwjglx.openal.ALCdevice alcCaptureOpenDevice(java.lang.String arg0, int arg1, int frequency,
-                                                                   int format) {
+    public static ALCdevice alcCaptureOpenDevice(java.lang.String arg0, int arg1, int frequency,
+                                                 int format) {
 
-        org.lwjglx.openal.ALCdevice returnValue = new org.lwjglx.openal.ALCdevice(
+        ALCdevice returnValue = new ALCdevice(
                 org.lwjgl.openal.ALC11.alcCaptureOpenDevice(arg0, arg1, frequency, format));
 
         return returnValue;
     }
 
-    public static void alcCaptureSamples(org.lwjglx.openal.ALCdevice device, java.nio.ByteBuffer buffer, int samples) {
+    public static void alcCaptureSamples(ALCdevice device, java.nio.ByteBuffer buffer, int samples) {
 
         org.lwjgl.openal.ALC11.alcCaptureSamples(device.device, buffer, samples);
     }
 
-    public static void alcCaptureStart(org.lwjglx.openal.ALCdevice device) {
+    public static void alcCaptureStart(ALCdevice device) {
 
         org.lwjgl.openal.ALC11.alcCaptureStart(device.device);
     }
 
-    public static void alcCaptureStop(org.lwjglx.openal.ALCdevice device) {
+    public static void alcCaptureStop(ALCdevice device) {
 
         org.lwjgl.openal.ALC11.alcCaptureStop(device.device);
     }

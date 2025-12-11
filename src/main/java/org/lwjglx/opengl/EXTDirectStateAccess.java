@@ -1,5 +1,6 @@
 package org.lwjglx.opengl;
 
+import org.lwjglx.MemoryUtil;
 import org.lwjglx.lwjgl3ify.BufferCasts;
 
 public class EXTDirectStateAccess {
@@ -456,13 +457,13 @@ public class EXTDirectStateAccess {
     public static void glGetCompressedMultiTexImageEXT(int texunit, int target, int level, java.nio.IntBuffer img) {
 
         org.lwjgl.opengl.EXTDirectStateAccess
-                .glGetCompressedMultiTexImageEXT(texunit, target, level, org.lwjglx.MemoryUtil.getAddress(img));
+                .glGetCompressedMultiTexImageEXT(texunit, target, level, MemoryUtil.getAddress(img));
     }
 
     public static void glGetCompressedMultiTexImageEXT(int texunit, int target, int level, java.nio.ShortBuffer img) {
 
         org.lwjgl.opengl.EXTDirectStateAccess
-                .glGetCompressedMultiTexImageEXT(texunit, target, level, org.lwjglx.MemoryUtil.getAddress(img));
+                .glGetCompressedMultiTexImageEXT(texunit, target, level, MemoryUtil.getAddress(img));
     }
 
     public static void glGetCompressedTextureImageEXT(int texture, int target, int level, long img_buffer_offset) {
@@ -476,13 +477,13 @@ public class EXTDirectStateAccess {
     public static void glGetCompressedTextureImageEXT(int texture, int target, int level, java.nio.IntBuffer img) {
 
         org.lwjgl.opengl.EXTDirectStateAccess
-                .glGetCompressedTextureImageEXT(texture, target, level, org.lwjglx.MemoryUtil.getAddress(img));
+                .glGetCompressedTextureImageEXT(texture, target, level, MemoryUtil.getAddress(img));
     }
 
     public static void glGetCompressedTextureImageEXT(int texture, int target, int level, java.nio.ShortBuffer img) {
 
         org.lwjgl.opengl.EXTDirectStateAccess
-                .glGetCompressedTextureImageEXT(texture, target, level, org.lwjglx.MemoryUtil.getAddress(img));
+                .glGetCompressedTextureImageEXT(texture, target, level, MemoryUtil.getAddress(img));
     }
 
     public static void glGetDoubleEXT(int pname, int index, java.nio.DoubleBuffer params) {

@@ -29,6 +29,7 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 
 import org.lwjgl.openal.AL11;
+import org.lwjglx.LWJGLUtil;
 
 // import com.sun.media.sound.WaveFileReader;
 
@@ -85,7 +86,7 @@ public class WaveData {
             // WaveFileReader wfr = new WaveFileReader();
             // return create(wfr.getAudioInputStream(new BufferedInputStream(path.openStream())));
         } catch (Exception e) {
-            org.lwjglx.LWJGLUtil.log("Unable to create from: " + path + ", " + e.getMessage());
+            LWJGLUtil.log("Unable to create from: " + path + ", " + e.getMessage());
             return null;
         }
     }
@@ -110,7 +111,7 @@ public class WaveData {
         try {
             return create(AudioSystem.getAudioInputStream(is));
         } catch (Exception e) {
-            org.lwjglx.LWJGLUtil.log("Unable to create from inputstream, " + e.getMessage());
+            LWJGLUtil.log("Unable to create from inputstream, " + e.getMessage());
             return null;
         }
     }
@@ -125,7 +126,7 @@ public class WaveData {
         try {
             return create(AudioSystem.getAudioInputStream(new BufferedInputStream(new ByteArrayInputStream(buffer))));
         } catch (Exception e) {
-            org.lwjglx.LWJGLUtil.log("Unable to create from byte array, " + e.getMessage());
+            LWJGLUtil.log("Unable to create from byte array, " + e.getMessage());
             return null;
         }
     }
@@ -149,7 +150,7 @@ public class WaveData {
             }
             return create(bytes);
         } catch (Exception e) {
-            org.lwjglx.LWJGLUtil.log("Unable to create from ByteBuffer, " + e.getMessage());
+            LWJGLUtil.log("Unable to create from ByteBuffer, " + e.getMessage());
             return null;
         }
     }

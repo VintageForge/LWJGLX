@@ -1,5 +1,7 @@
 package org.lwjglx.opengl;
 
+import org.lwjglx.MemoryUtil;
+
 public class GL45 {
 
     public static final int GL_CLIP_DEPTH_MODE = (int) 37725;
@@ -145,7 +147,7 @@ public class GL45 {
                 depth,
                 format,
                 imageSize,
-                org.lwjglx.MemoryUtil.getAddress(data));
+                MemoryUtil.getAddress(data));
     }
 
     public static void glCopyNamedBufferSubData(int readBuffer, int writeBuffer, long readOffset, long writeOffset,

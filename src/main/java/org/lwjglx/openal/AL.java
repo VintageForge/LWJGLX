@@ -1,5 +1,7 @@
 package org.lwjglx.openal;
 
+import net.minecraftforge.common.ForgeEarlyConfig;
+
 import java.nio.IntBuffer;
 
 import org.lwjgl.openal.ALC10;
@@ -10,8 +12,8 @@ import org.lwjglx.Sys;
 
 public class AL {
 
-    static ALCdevice alcDevice;
-    static ALCcontext alcContext;
+    static volatile ALCdevice alcDevice;
+    static volatile ALCcontext alcContext;
 
     private static boolean created = false;
 
@@ -24,12 +26,12 @@ public class AL {
     }
 
     public static void create(String deviceArguments, int contextFrequency, int contextRefresh,
-                              boolean contextSynchronized) {
+                              boolean contextSynchronized) throws LWJGLException {
         create(deviceArguments, contextFrequency, contextRefresh, contextSynchronized, true);
     }
 
     public static void create(String deviceArguments, int contextFrequency, int contextRefresh,
-                              boolean contextSynchronized, boolean openDevice) {
+                              boolean contextSynchronized, boolean openDevice) throws LWJGLException {
         IntBuffer attribs = BufferUtils.createIntBuffer(16);
 
         attribs.put(org.lwjgl.openal.ALC10.ALC_FREQUENCY);
@@ -40,6 +42,16 @@ public class AL {
 
         attribs.put(org.lwjgl.openal.ALC10.ALC_SYNC);
         attribs.put(contextSynchronized ? org.lwjgl.openal.ALC10.ALC_TRUE : org.lwjgl.openal.ALC10.ALC_FALSE);
+
+        /////////////////////////////////////////////
+        // HRTF
+        if (!ForgeEarlyConfig.OPENAL_CONTEXT.ENABLE_HRTF) {
+            attribs.put(org.lwjgl.openal.SOFTHRTF.ALC_HRTF_SOFT);
+            attribs.put(org.lwjgl.openal.ALC10.ALC_FALSE);
+            attribs.put(org.lwjgl.openal.SOFTHRTF.ALC_HRTF_ID_SOFT);
+            attribs.put(0);
+        }
+        /////////////////////////////////////////////
         
         attribs.put(org.lwjgl.openal.EXTEfx.ALC_MAX_AUXILIARY_SENDS);
         attribs.put(4);
@@ -50,6 +62,8 @@ public class AL {
         String defaultDevice = org.lwjgl.openal.ALC10.alcGetString(0, ALC10.ALC_DEFAULT_DEVICE_SPECIFIER);
 
         long deviceHandle = org.lwjgl.openal.ALC10.alcOpenDevice(defaultDevice);
+
+        if (deviceHandle == 0) throw new LWJGLException("Could not open ALC device");
 
         alcDevice = new ALCdevice(deviceHandle);
 
@@ -68,14 +82,18 @@ public class AL {
     }
 
     public static void destroy() {
-        org.lwjgl.openal.ALC10.alcDestroyContext(alcContext.context);
-        org.lwjgl.openal.ALC10.alcCloseDevice(alcDevice.device);
-        alcContext = null;
-        alcDevice = null;
+        if (alcContext != null) {
+            org.lwjgl.openal.ALC10.alcDestroyContext(alcContext.context);
+            alcContext = null;
+        }
+        if (alcDevice != null) {
+            org.lwjgl.openal.ALC10.alcCloseDevice(alcDevice.device);
+            alcDevice = null;
+        }
         created = false;
     }
 
-    public static org.lwjglx.openal.ALCcontext getContext() {
+    public static ALCcontext getContext() {
         return alcContext;
     }
 

@@ -1,5 +1,6 @@
 package org.lwjglx.opengl;
 
+import org.lwjglx.MemoryUtil;
 import org.lwjglx.lwjgl3ify.BufferCasts;
 
 public class EXTSecondaryColor {
@@ -54,6 +55,6 @@ public class EXTSecondaryColor {
                 size,
                 (unsigned ? org.lwjgl.opengl.GL11.GL_UNSIGNED_BYTE : org.lwjgl.opengl.GL11.GL_BYTE),
                 stride,
-                org.lwjglx.MemoryUtil.getAddress(pPointer));
+                MemoryUtil.getAddress(pPointer));
     }
 }

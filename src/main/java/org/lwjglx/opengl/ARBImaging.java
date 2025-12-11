@@ -1,5 +1,6 @@
 package org.lwjglx.opengl;
 
+import org.lwjglx.MemoryUtil;
 import org.lwjglx.lwjgl3ify.BufferCasts;
 
 public class ARBImaging {
@@ -99,14 +100,14 @@ public class ARBImaging {
             java.nio.DoubleBuffer data) {
 
         org.lwjgl.opengl.ARBImaging
-                .glColorSubTable(target, start, count, format, type, org.lwjglx.MemoryUtil.getAddress(data));
+                .glColorSubTable(target, start, count, format, type, MemoryUtil.getAddress(data));
     }
 
     public static void glColorSubTable(int target, int start, int count, int format, int type,
             java.nio.FloatBuffer data) {
 
         org.lwjgl.opengl.ARBImaging
-                .glColorSubTable(target, start, count, format, type, org.lwjglx.MemoryUtil.getAddress(data));
+                .glColorSubTable(target, start, count, format, type, MemoryUtil.getAddress(data));
     }
 
     public static void glColorTable(int target, int internalFormat, int width, int format, int type,
@@ -123,7 +124,7 @@ public class ARBImaging {
             java.nio.DoubleBuffer data) {
 
         org.lwjgl.opengl.ARBImaging
-                .glColorTable(target, internalFormat, width, format, type, org.lwjglx.MemoryUtil.getAddress(data));
+                .glColorTable(target, internalFormat, width, format, type, MemoryUtil.getAddress(data));
     }
 
     public static void glColorTable(int target, int internalFormat, int width, int format, int type,
@@ -159,7 +160,7 @@ public class ARBImaging {
                 width,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(image));
+                MemoryUtil.getAddress(image));
     }
 
     public static void glConvolutionFilter1D(int target, int internalformat, int width, int format, int type,
@@ -171,7 +172,7 @@ public class ARBImaging {
                 width,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(image));
+                MemoryUtil.getAddress(image));
     }
 
     public static void glConvolutionFilter1D(int target, int internalformat, int width, int format, int type,
@@ -183,7 +184,7 @@ public class ARBImaging {
                 width,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(image));
+                MemoryUtil.getAddress(image));
     }
 
     public static void glConvolutionFilter1D(int target, int internalformat, int width, int format, int type,
@@ -195,7 +196,7 @@ public class ARBImaging {
                 width,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(image));
+                MemoryUtil.getAddress(image));
     }
 
     public static void glConvolutionFilter2D(int target, int internalformat, int width, int height, int format,
@@ -219,7 +220,7 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(image));
+                MemoryUtil.getAddress(image));
     }
 
     public static void glConvolutionFilter2D(int target, int internalformat, int width, int height, int format,
@@ -232,7 +233,7 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(image));
+                MemoryUtil.getAddress(image));
     }
 
     public static void glConvolutionParameter(int target, int pname, java.nio.FloatBuffer params) {
@@ -273,7 +274,7 @@ public class ARBImaging {
 
     public static void glGetColorTable(int target, int format, int type, java.nio.DoubleBuffer data) {
 
-        org.lwjgl.opengl.ARBImaging.glGetColorTable(target, format, type, org.lwjglx.MemoryUtil.getAddress(data));
+        org.lwjgl.opengl.ARBImaging.glGetColorTable(target, format, type, MemoryUtil.getAddress(data));
     }
 
     public static void glGetColorTable(int target, int format, int type, java.nio.FloatBuffer data) {
@@ -299,25 +300,25 @@ public class ARBImaging {
     public static void glGetConvolutionFilter(int target, int format, int type, java.nio.DoubleBuffer image) {
 
         org.lwjgl.opengl.ARBImaging
-                .glGetConvolutionFilter(target, format, type, org.lwjglx.MemoryUtil.getAddress(image));
+                .glGetConvolutionFilter(target, format, type, MemoryUtil.getAddress(image));
     }
 
     public static void glGetConvolutionFilter(int target, int format, int type, java.nio.FloatBuffer image) {
 
         org.lwjgl.opengl.ARBImaging
-                .glGetConvolutionFilter(target, format, type, org.lwjglx.MemoryUtil.getAddress(image));
+                .glGetConvolutionFilter(target, format, type, MemoryUtil.getAddress(image));
     }
 
     public static void glGetConvolutionFilter(int target, int format, int type, java.nio.IntBuffer image) {
 
         org.lwjgl.opengl.ARBImaging
-                .glGetConvolutionFilter(target, format, type, org.lwjglx.MemoryUtil.getAddress(image));
+                .glGetConvolutionFilter(target, format, type, MemoryUtil.getAddress(image));
     }
 
     public static void glGetConvolutionFilter(int target, int format, int type, java.nio.ShortBuffer image) {
 
         org.lwjgl.opengl.ARBImaging
-                .glGetConvolutionFilter(target, format, type, org.lwjglx.MemoryUtil.getAddress(image));
+                .glGetConvolutionFilter(target, format, type, MemoryUtil.getAddress(image));
     }
 
     public static void glGetConvolutionParameter(int target, int pname, java.nio.FloatBuffer params) {
@@ -339,25 +340,25 @@ public class ARBImaging {
     public static void glGetHistogram(int target, boolean reset, int format, int type, java.nio.DoubleBuffer values) {
 
         org.lwjgl.opengl.ARBImaging
-                .glGetHistogram(target, reset, format, type, org.lwjglx.MemoryUtil.getAddress(values));
+                .glGetHistogram(target, reset, format, type, MemoryUtil.getAddress(values));
     }
 
     public static void glGetHistogram(int target, boolean reset, int format, int type, java.nio.FloatBuffer values) {
 
         org.lwjgl.opengl.ARBImaging
-                .glGetHistogram(target, reset, format, type, org.lwjglx.MemoryUtil.getAddress(values));
+                .glGetHistogram(target, reset, format, type, MemoryUtil.getAddress(values));
     }
 
     public static void glGetHistogram(int target, boolean reset, int format, int type, java.nio.IntBuffer values) {
 
         org.lwjgl.opengl.ARBImaging
-                .glGetHistogram(target, reset, format, type, org.lwjglx.MemoryUtil.getAddress(values));
+                .glGetHistogram(target, reset, format, type, MemoryUtil.getAddress(values));
     }
 
     public static void glGetHistogram(int target, boolean reset, int format, int type, java.nio.ShortBuffer values) {
 
         org.lwjgl.opengl.ARBImaging
-                .glGetHistogram(target, reset, format, type, org.lwjglx.MemoryUtil.getAddress(values));
+                .glGetHistogram(target, reset, format, type, MemoryUtil.getAddress(values));
     }
 
     public static void glGetHistogramParameter(int target, int pname, java.nio.FloatBuffer params) {
@@ -378,22 +379,22 @@ public class ARBImaging {
 
     public static void glGetMinmax(int target, boolean reset, int format, int types, java.nio.DoubleBuffer values) {
 
-        org.lwjgl.opengl.ARBImaging.glGetMinmax(target, reset, format, types, org.lwjglx.MemoryUtil.getAddress(values));
+        org.lwjgl.opengl.ARBImaging.glGetMinmax(target, reset, format, types, MemoryUtil.getAddress(values));
     }
 
     public static void glGetMinmax(int target, boolean reset, int format, int types, java.nio.FloatBuffer values) {
 
-        org.lwjgl.opengl.ARBImaging.glGetMinmax(target, reset, format, types, org.lwjglx.MemoryUtil.getAddress(values));
+        org.lwjgl.opengl.ARBImaging.glGetMinmax(target, reset, format, types, MemoryUtil.getAddress(values));
     }
 
     public static void glGetMinmax(int target, boolean reset, int format, int types, java.nio.IntBuffer values) {
 
-        org.lwjgl.opengl.ARBImaging.glGetMinmax(target, reset, format, types, org.lwjglx.MemoryUtil.getAddress(values));
+        org.lwjgl.opengl.ARBImaging.glGetMinmax(target, reset, format, types, MemoryUtil.getAddress(values));
     }
 
     public static void glGetMinmax(int target, boolean reset, int format, int types, java.nio.ShortBuffer values) {
 
-        org.lwjgl.opengl.ARBImaging.glGetMinmax(target, reset, format, types, org.lwjglx.MemoryUtil.getAddress(values));
+        org.lwjgl.opengl.ARBImaging.glGetMinmax(target, reset, format, types, MemoryUtil.getAddress(values));
     }
 
     public static void glGetMinmaxParameter(int target, int pname, java.nio.FloatBuffer params) {
@@ -417,8 +418,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -431,8 +432,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -445,8 +446,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -458,8 +459,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -471,8 +472,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -485,8 +486,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -499,8 +500,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -512,8 +513,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -525,8 +526,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -539,8 +540,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -553,8 +554,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -566,8 +567,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -579,8 +580,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -593,8 +594,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -607,8 +608,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -620,8 +621,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -633,8 +634,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -647,8 +648,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -661,8 +662,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -674,8 +675,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -687,8 +688,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -701,8 +702,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -715,8 +716,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -728,8 +729,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -741,8 +742,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -755,8 +756,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -769,8 +770,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -782,8 +783,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -795,8 +796,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -809,8 +810,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -823,8 +824,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -836,8 +837,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -849,8 +850,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -863,8 +864,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -877,8 +878,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -890,8 +891,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -903,8 +904,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -917,8 +918,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -931,8 +932,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -944,8 +945,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -957,8 +958,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -971,8 +972,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -985,8 +986,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -998,8 +999,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -1011,8 +1012,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1025,8 +1026,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1039,8 +1040,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1052,8 +1053,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -1065,8 +1066,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1079,8 +1080,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1093,8 +1094,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1106,8 +1107,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -1119,8 +1120,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1133,8 +1134,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1147,8 +1148,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1160,8 +1161,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -1173,8 +1174,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1187,8 +1188,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1201,8 +1202,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1214,8 +1215,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -1227,8 +1228,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1241,8 +1242,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1255,8 +1256,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1268,8 +1269,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -1281,8 +1282,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1295,8 +1296,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1309,8 +1310,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1322,8 +1323,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -1335,8 +1336,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1349,8 +1350,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1363,8 +1364,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1376,8 +1377,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -1389,8 +1390,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1403,8 +1404,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1417,8 +1418,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1430,8 +1431,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 span);
     }
 
@@ -1443,8 +1444,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1457,8 +1458,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1471,8 +1472,8 @@ public class ARBImaging {
                 target,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column),
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column),
                 wrappedArg5);
         BufferCasts.updateBuffer(span, wrappedArg5);
     }
@@ -1522,8 +1523,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1536,8 +1537,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1550,8 +1551,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1564,8 +1565,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1578,8 +1579,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1592,8 +1593,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1606,8 +1607,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1620,8 +1621,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1634,8 +1635,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1648,8 +1649,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1662,8 +1663,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1676,8 +1677,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1690,8 +1691,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1704,8 +1705,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1718,8 +1719,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1732,8 +1733,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1746,8 +1747,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1760,8 +1761,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1774,8 +1775,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1788,8 +1789,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1802,8 +1803,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1816,8 +1817,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1830,8 +1831,8 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 
     public static void glSeparableFilter2D(int target, int internalformat, int width, int height, int format, int type,
@@ -1844,7 +1845,7 @@ public class ARBImaging {
                 height,
                 format,
                 type,
-                org.lwjglx.MemoryUtil.getAddress(row),
-                org.lwjglx.MemoryUtil.getAddress(column));
+                MemoryUtil.getAddress(row),
+                MemoryUtil.getAddress(column));
     }
 }

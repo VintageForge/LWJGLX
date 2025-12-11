@@ -1,5 +1,7 @@
 package org.lwjglx.opengl;
 
+import org.lwjglx.MemoryUtil;
+
 public class GL13 {
 
     public static final int GL_ACTIVE_TEXTURE = (int) 34016;
@@ -232,12 +234,12 @@ public class GL13 {
 
     public static void glGetCompressedTexImage(int target, int lod, java.nio.IntBuffer img) {
 
-        org.lwjgl.opengl.GL13.glGetCompressedTexImage(target, lod, org.lwjglx.MemoryUtil.getAddress(img));
+        org.lwjgl.opengl.GL13.glGetCompressedTexImage(target, lod, MemoryUtil.getAddress(img));
     }
 
     public static void glGetCompressedTexImage(int target, int lod, java.nio.ShortBuffer img) {
 
-        org.lwjgl.opengl.GL13.glGetCompressedTexImage(target, lod, org.lwjglx.MemoryUtil.getAddress(img));
+        org.lwjgl.opengl.GL13.glGetCompressedTexImage(target, lod, MemoryUtil.getAddress(img));
     }
 
     public static void glLoadTransposeMatrix(java.nio.DoubleBuffer m) {

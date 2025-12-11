@@ -1,5 +1,6 @@
 package org.lwjglx.opengl;
 
+import org.lwjglx.MemoryUtil;
 import org.lwjglx.lwjgl3ify.BufferCasts;
 
 public class GL11 {
@@ -692,7 +693,7 @@ public class GL11 {
                 size,
                 (unsigned ? org.lwjgl.opengl.GL11.GL_UNSIGNED_BYTE : org.lwjgl.opengl.GL11.GL_BYTE),
                 stride,
-                org.lwjglx.MemoryUtil.getAddress(pointer));
+                MemoryUtil.getAddress(pointer));
     }
 
     public static void glCopyPixels(int x, int y, int width, int height, int type) {
@@ -768,7 +769,7 @@ public class GL11 {
 
     public static void glDrawElements(int mode, int count, int type, java.nio.ByteBuffer indices) {
 
-        org.lwjgl.opengl.GL11.glDrawElements(mode, count, type, org.lwjglx.MemoryUtil.getAddress(indices));
+        org.lwjgl.opengl.GL11.glDrawElements(mode, count, type, MemoryUtil.getAddress(indices));
     }
 
     public static void glDrawElements(int mode, java.nio.ByteBuffer indices) {
@@ -1489,7 +1490,7 @@ public class GL11 {
     public static void glReadPixels(int x, int y, int width, int height, int format, int type,
             java.nio.DoubleBuffer pixels) {
 
-        org.lwjgl.opengl.GL11.glReadPixels(x, y, width, height, format, type, org.lwjglx.MemoryUtil.getAddress(pixels));
+        org.lwjgl.opengl.GL11.glReadPixels(x, y, width, height, format, type, MemoryUtil.getAddress(pixels));
     }
 
     public static void glReadPixels(int x, int y, int width, int height, int format, int type,

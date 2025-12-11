@@ -1,5 +1,6 @@
 package org.lwjglx.opengl;
 
+import org.lwjglx.MemoryUtil;
 import org.lwjglx.lwjgl3ify.BufferCasts;
 
 public class GL14 {
@@ -148,7 +149,7 @@ public class GL14 {
                 size,
                 (unsigned ? org.lwjgl.opengl.GL11.GL_UNSIGNED_BYTE : org.lwjgl.opengl.GL11.GL_BYTE),
                 stride,
-                org.lwjglx.MemoryUtil.getAddress(data));
+                MemoryUtil.getAddress(data));
     }
 
     public static void glWindowPos2d(double x, double y) {
