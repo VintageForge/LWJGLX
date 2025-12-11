@@ -1,3 +1,3 @@
 rootProject.name = "LWJGLX"
 
-include(":earlyconfig")
+include(":dummies")
