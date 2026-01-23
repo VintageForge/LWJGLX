@@ -5,7 +5,7 @@ import java.nio.IntBuffer;
 
 import net.minecraftforge.common.ForgeEarlyConfig;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.glfw.GLFW;
 import org.lwjgl.system.MemoryUtil;
@@ -306,7 +306,7 @@ public class Mouse {
 
     public static int getButtonIndex(String buttonName) {
         if (buttonName.matches("BUTTON[0-9]+")) {
-            return Integer.parseInt(StringUtils.removeStart(buttonName, "BUTTON"));
+            return Integer.parseInt(Strings.CS.removeStart(buttonName, "BUTTON"));
         } else {
             return -1;
         }
