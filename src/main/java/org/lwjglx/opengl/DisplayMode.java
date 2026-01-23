@@ -18,8 +18,7 @@ package org.lwjglx.opengl;
 /**
  *
  * This class encapsulates the properties for a given display mode. This class is not instantiable, and is aquired from
- * the <code>Display.
- * getAvailableDisplayModes()</code> method.
+ * the <code>Display.getAvailableDisplayModes()</code> method.
  *
  * @author cix_foo <cix_foo@users.sourceforge.net>
  * @version $Revision$ $Id$
@@ -83,7 +82,7 @@ public final class DisplayMode {
      * @see java.lang.Object#equals(Object)
      */
     public boolean equals(Object obj) {
-        if (obj == null || !(obj instanceof DisplayMode dm)) {
+        if (!(obj instanceof DisplayMode dm)) {
             return false;
         }
 

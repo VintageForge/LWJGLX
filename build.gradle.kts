@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "xyz.vintageforge"
-version = "1.0.10"
+version = "1.0.12"
 
 repositories {
     mavenCentral()
@@ -14,13 +14,13 @@ dependencies {
 
     compileOnly(project(":dummies"))
 
-    listOf("lwjgl-glfw", "lwjgl-jemalloc", "lwjgl-openal", "lwjgl-opengl", "lwjgl-stb", "lwjgl-tinyfd", "lwjgl").forEach {
-        compileOnly("org.lwjgl:$it:3.3.6")
+    listOf("lwjgl-glfw", "lwjgl-jemalloc", "lwjgl-openal", "lwjgl-opengl", "lwjgl-spng", "lwjgl-stb", "lwjgl-tinyfd", "lwjgl").forEach {
+        compileOnly("org.lwjgl:$it:3.4.0")
     }
 
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
-    compileOnly("org.apache.commons:commons-lang3:3.19.0")
-    compileOnly("com.github.oshi:oshi-core:6.9.1")
+    compileOnly("org.apache.commons:commons-lang3:3.20.0")
+    compileOnly("com.github.oshi:oshi-core:6.9.2")
 
 }
 
